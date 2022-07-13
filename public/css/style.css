@@ -1,7 +1,27 @@
 body {
   padding-top: 82px;
   min-height: 100vh;
+  font-family: "Almarai", sans-serif;
 }
 * {
   box-sizing: border-box;
+}
+.main-news {
+  background: aliceblue;
+  height: 400px;
+
+  background-size: cover;
+}
+.last-news a {
+  height: 50px;
+}
+.news div {
+  height: 180px;
+  background: aliceblue;
+}
+.news h2 {
+  height: 125;
+}
+.news p {
+  height: 75;
 }

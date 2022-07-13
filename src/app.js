@@ -35,7 +35,16 @@ app.get("/", (req, res) => {
       } else if (response.body.totalResults == 0) {
         console.log("invalid country name");
       } else {
-        res.render("index", response.body);
+        res.render("index", {
+          res: response.body,
+          articles0: response.body.articles[0],
+          articles1: response.body.articles[1],
+          articles2: response.body.articles[2],
+          articles3: response.body.articles[3],
+          articles4: response.body.articles[4],
+          articles5: response.body.articles[5],
+          articles6: response.body.articles[6],
+        });
       }
     }
   );

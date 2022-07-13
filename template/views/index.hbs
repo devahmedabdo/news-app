@@ -7,12 +7,39 @@
 
   <section>
     <div class="container">
-      <div class="new-content d-flex flex-wrap justify-content-center m-2">
-        {{#each articles}}
-        <div class="bg-light col-lg-3 col-md-5 d-flex flex-column gap-3 overflow-hidden rounded-4 shadow m-3 justify-content-between">
-          <img class="w-100" src="{{this.urlToImage}}" alt="">
-          <h2 class="pt-4 px-1 fs-3">{{this.title}}</h2>
-          <p class="m-0">{{this.description}}</p>
+
+
+      <div class="g-4 justify-content-between row">
+        <div class="col-lg-7 position-relative main-news rounded-3" style="  background: linear-gradient(0deg, black, 70%, transparent),
+  url({{articles3.urlToImage}}), url(images/news.png) center;   background-size: cover;">
+          <p class="position-absolute bottom-0 text-white ">
+            {{articles3.title}}
+          </p>
+
+        </div>
+        <div class="col-lg-4 d-flex flex-column fw-bold gap-2 last-news">
+          <h3 class="border-2 border-bottom border-dark m-0 pb-4">الاخبار الرئيسية</h3>
+          <a class="overflow-hidden text-warning text-decoration-none " href="{{articles0.url}}" >{{articles0.title}}</a>
+          <a class="overflow-hidden text-dark text-decoration-none" href="{{articles1.url}}" >{{articles1.title}}</a>
+          <a class="overflow-hidden text-warning text-decoration-none " href="{{articles2.url}}" >{{articles2.title}}</a>
+          <a class="overflow-hidden text-dark text-decoration-none" href="{{articles4.url}}" >{{articles4.title}}</a>
+          <a class="overflow-hidden text-warning text-decoration-none " href="{{articles6.url}}" >{{articles6.title}}</a>
+          <a class="overflow-hidden text-dark text-decoration-none" href="{{articles5.url}}" >{{articles5.title}}</a>
+        </div>
+      </div>
+
+
+
+
+      <div class="new-content d-flex flex-wrap justify-content-center m-2 pt-5">
+        {{#each res.articles}}
+        <div
+          class="news bg-light col-lg-3 col-md-5 d-flex flex-column gap-3 overflow-hidden rounded-4 shadow m-3 justify-content-between">
+
+          <div class="w-100" style="  background: url({{this.urlToImage}}), url(images/news.png) center;   background-size: cover;"></div>
+
+          <h2 class="overflow-hidden pt-4 px-1 fs-3" >{{this.title}}</h2>
+          <p class="overflow-hidden m-0" >{{this.description}}</p>
           <a class="btn btn-primary mx-auto my-3 px-5 rounded-5" href="{{this.url}}">للمزيد</a>
         </div>
         {{/each}}
