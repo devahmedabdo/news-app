@@ -9,7 +9,6 @@ body {
 .main-news {
   background: aliceblue;
   height: 400px;
-
   background-size: cover;
 }
 .last-news a {
