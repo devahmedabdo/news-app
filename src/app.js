@@ -15,7 +15,6 @@ const partialsDir = path.join(__dirname, "../template/partials");
 hbs.registerPartials(partialsDir);
 //////// to use request for api
 const request = require("request");
-const { rmSync } = require("fs");
 const myUrl =
   "https://newsapi.org/v2/top-headlines?country=eg&apiKey=e011bdf7732e4ba2a4224c95b03ecfd8";
 app.get("/", (req, res) => {
